@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StaffListViewController">
+            <connections>
+                <outlet property="emtyView" destination="Lgb-fe-yPY" id="bhH-pe-TjQ"/>
+                <outlet property="tableView" destination="hN2-KH-YLc" id="eyW-fS-9kB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hN2-KH-YLc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kjg-NP-AGX"/>
+                        <outlet property="delegate" destination="-1" id="CU4-TX-dmX"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgb-fe-yPY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klx-Zc-Pwi">
+                            <rect key="frame" x="67" y="150" width="240" height="367"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" keyboardDismissMode="interactive" text="Aquaculture Management System" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vui-D8-Nsa">
+                                    <rect key="frame" x="62" y="99" width="117" height="84"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="84" id="EW5-1h-hQi"/>
+                                        <constraint firstAttribute="width" constant="117" id="nfc-23-ZqI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-CB-lx0">
+                                    <rect key="frame" x="39" y="261" width="162" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="162" id="0bW-hN-Idi"/>
+                                        <constraint firstAttribute="height" constant="21" id="eJV-Cd-SRX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="367" id="0Jl-95-Tlh"/>
+                                <constraint firstItem="vui-D8-Nsa" firstAttribute="centerX" secondItem="klx-Zc-Pwi" secondAttribute="centerX" id="4Uv-Mx-QXf"/>
+                                <constraint firstAttribute="bottom" secondItem="rdJ-CB-lx0" secondAttribute="bottom" constant="85" id="DKf-CX-lEG"/>
+                                <constraint firstItem="rdJ-CB-lx0" firstAttribute="centerX" secondItem="klx-Zc-Pwi" secondAttribute="centerX" id="G8s-CI-5i6"/>
+                                <constraint firstAttribute="width" constant="240" id="XoP-97-VSG"/>
+                                <constraint firstItem="vui-D8-Nsa" firstAttribute="top" secondItem="klx-Zc-Pwi" secondAttribute="top" constant="99" id="drc-M7-RNm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="klx-Zc-Pwi" firstAttribute="centerY" secondItem="Lgb-fe-yPY" secondAttribute="centerY" id="0A8-Om-KQ9"/>
+                        <constraint firstItem="klx-Zc-Pwi" firstAttribute="centerX" secondItem="Lgb-fe-yPY" secondAttribute="centerX" id="tAa-Ua-2Pm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hN2-KH-YLc" secondAttribute="trailing" id="36f-v4-Pbh"/>
+                <constraint firstItem="Lgb-fe-yPY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Yy-fC-EAj"/>
+                <constraint firstAttribute="bottom" secondItem="hN2-KH-YLc" secondAttribute="bottom" id="9vs-dy-Dbf"/>
+                <constraint firstAttribute="bottom" secondItem="Lgb-fe-yPY" secondAttribute="bottom" id="P86-tD-otx"/>
+                <constraint firstAttribute="trailing" secondItem="Lgb-fe-yPY" secondAttribute="trailing" id="Wdd-bi-oEK"/>
+                <constraint firstItem="hN2-KH-YLc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bD6-pj-BJ4"/>
+                <constraint firstItem="hN2-KH-YLc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gKa-ZN-gKG"/>
+                <constraint firstItem="Lgb-fe-yPY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t4N-WK-369"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

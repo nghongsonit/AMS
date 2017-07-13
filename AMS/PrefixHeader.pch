@@ -1,0 +1,62 @@
+//
+//  PrefixHeader.pch
+//  IQC
+//
+//  Created by SonTayTo on 9/22/16.
+//  Copyright © 2016 SonTayTo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define FontThin @"STHeitiSC-Light"
+#define StringFormat(karg,...)  [NSString stringWithFormat:(karg),##__VA_ARGS__]
+
+#define colorWithRGB(kred,kgreen,kblue,kalpha) [UIColor colorWithRed:kred/255.0f green:kgreen/255.0f blue:kblue/255.0f alpha:kalpha]
+
+#define OSVersionIsAtLeastiOS7 return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1)
+
+#define NOTIFICATION_GET_HOME_SEVICE @"NOTIFICATION_GET_HOME_SEVICE"
+#define NOTIFICATION_MOVIESPLAYER_FULLSCRENNSTATUS @"MOVIESPLAYER_FULLSCRENNSTATUS"
+
+#define IS_IPHONE4 (([[UIScreen mainScreen] bounds].size.height-480)?NO:YES)
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+#define IS_IPHONE6 (([[UIScreen mainScreen] bounds].size.height-667)?NO:YES)
+#define IS_IPHONE6PLUS (([[UIScreen mainScreen] bounds].size.height-736)?NO:YES)
+#define IS_OS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
+#define IS_OS_6_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
+#define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define heightStatusBar 20
+#define TITLE_ALERT @"Thông báo"
+#define ERROR @"Lỗi"
+#define URL @"http://iqc.fpt.vn/img/480"
+#define NETWORK_ERROR @"Mất kết nối mạng. Vui lòng kết nối lại"
+#define screenSize ([[UIScreen mainScreen] bounds].size)
+
+#define kOFFSET_FOR_KEYBOARD 150.0
+
+#define HOME_CELL @"HomeTableViewCell"
+#define HOME_CELL_MANAGER @"HomeTableViewCell_Manager"
+#define NOTIFICATION_CELL @"NotificationTableViewCell"
+#define OPTION_CELL @"OptionTableViewCell"
+#define MEDICINE_CELL @"MedicineTableViewCell"
+#define COMMAND_CELL @"StaffCommandTableViewCell"
+
+#define MISSING_INPUT @"Vui lòng nhập đầy đủ thông tin"
+
+#define URL_IMAGE_UPLOAD @"http://api.amsapp.xyz/img/480"
+#define IMAGE_CELL @"PhotoCollectionViewCell"
+
+#define dx 113
